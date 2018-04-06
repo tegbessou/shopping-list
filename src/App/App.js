@@ -6,6 +6,7 @@ import { history } from '../_helpers';
 import { PrivateRoute } from '../_components';
 import { Header } from '../Header'
 import { Login } from '../Login';
+import { Register } from '../Register';
 import { User } from '../User';
 
 class App extends React.Component {
@@ -17,6 +18,7 @@ class App extends React.Component {
                       <Header />
                       <PrivateRoute exact path="/user" component={User} />
                       <Route path="/sign-in" component={Login} />
+                      <Route path="/register" component={Register} />
                   </div>
               </Router>
           </div>

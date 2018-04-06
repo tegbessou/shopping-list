@@ -1,0 +1,13 @@
+:local(.container) {
+    width: 40%;
+    padding-top: 3%;
+    padding-left: 3%;
+}
+
+:local(.errorMessage) {
+    color: red;
+}
+
+:local(.spaceBetweenButton) {
+    margin-left: 1%;
+}
