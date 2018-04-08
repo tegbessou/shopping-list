@@ -2,11 +2,6 @@
     width: 50%;
 }
 
-:local(.container) {
-    padding-top: 3%;
-    padding-left: 3%;
-}
-
 :local(.errorMessage) {
     color: red;
 }

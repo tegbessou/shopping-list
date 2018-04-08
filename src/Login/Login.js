@@ -42,8 +42,9 @@ class Login extends React.Component {
         const { submitted, username, password} = this.state;
 
         return(
-            <div>
-                <form onSubmit={this.handleSubmit} className={styles.container}>
+            <div className={styles.container}>
+                <h2>Login</h2>
+                <form onSubmit={this.handleSubmit} className={styles.formContainer}>
                     <div className="form-group">
                         <label htmlFor="username">Email address</label>
                         <input onChange={this.handleChange} type="email" className="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Enter email" />

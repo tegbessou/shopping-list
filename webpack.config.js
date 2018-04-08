@@ -1,5 +1,6 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
     entry: './src/index.js',
@@ -8,6 +9,14 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.(pdf|jpg|png|gif|svg|ico)$/,
+                use: [
+                    {
+                        loader: 'url-loader'
+                    },
+                ]
+            },
             {
                 test: /\.css$/,
                 loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
@@ -26,7 +35,8 @@ module.exports = {
         template: './src/index.html',
         filename: 'index.html',
         inject: 'body'
-    })],
+    }),
+    new UglifyWebpackPlugin()],
     devServer: {
         historyApiFallback: true
     }
